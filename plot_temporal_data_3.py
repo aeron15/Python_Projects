@@ -48,4 +48,15 @@ params = {
    }
 rcParams.update(params)
 
+legend = legend(["Low mutation rate", "High Mutation rate"], loc=4);
+frame = legend.get_frame()
+frame.set_facecolor('0.9')
+frame.set_edgecolor('0.9')
+
+xticks(np.arange(0, 500, 100))
+
+# put this _before_ the calls to plot and fill_between
+#axes(frameon=0)
+grid()
+
 savefig('medians1.png')
